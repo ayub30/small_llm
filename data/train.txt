@@ -1,0 +1,323 @@
+Q: What is VAT?
+A: VAT stands for Value Added Tax. It is a consumption tax added at each stage of production.
+
+Q: What is the standard VAT rate in the UK?
+A: The standard VAT rate in the UK is 20%.
+
+Q: What is the reduced VAT rate?
+A: The reduced VAT rate in the UK is 5%.
+
+Q: What is the zero VAT rate?
+A: The zero VAT rate is 0% and applies to essential goods.
+
+Q: What is an invoice?
+A: An invoice is a document requesting payment for goods or services.
+
+Q: What is a receipt?
+A: A receipt is proof that payment has been made.
+
+Q: What is an invoice number?
+A: An invoice number is a unique identifier for an invoice.
+
+Q: What is the invoice date?
+A: The invoice date is when the invoice is issued.
+
+Q: What is the due date?
+A: The due date is when payment must be made.
+
+Q: What is net amount?
+A: Net amount is the value before VAT is added.
+
+Q: What is gross amount?
+A: Gross amount is the total including VAT.
+
+Q: What is VAT amount?
+A: VAT amount is the tax calculated on the net value.
+
+Q: What is a VAT invoice?
+A: A VAT invoice includes VAT details and registration number.
+
+Q: What is a proforma invoice?
+A: A proforma invoice is a preliminary invoice before final sale.
+
+Q: What is a credit note?
+A: A credit note reduces the amount owed.
+
+Q: What is a debit note?
+A: A debit note increases the amount owed.
+
+Q: What is a purchase order?
+A: A purchase order is a document confirming an order.
+
+Q: What is a supplier?
+A: A supplier provides goods or services.
+
+Q: What is a customer?
+A: A customer purchases goods or services.
+
+Q: What is billing address?
+A: Billing address is where invoices are sent.
+
+Q: What is shipping address?
+A: Shipping address is where goods are delivered.
+
+Q: What is line item?
+A: A line item is an individual product or service entry.
+
+Q: What is unit price?
+A: Unit price is the cost per item.
+
+Q: What is quantity?
+A: Quantity is the number of items purchased.
+
+Q: What is subtotal?
+A: Subtotal is the total before VAT and discounts.
+
+Q: What is total amount?
+A: Total amount is the final payable amount.
+
+Q: What is a discount?
+A: A discount reduces the total price.
+
+Q: What is early payment discount?
+A: It is a discount for paying before the due date.
+
+Q: What is late payment fee?
+A: It is a charge for overdue invoices.
+
+Q: What is net 30?
+A: Net 30 means payment is due in 30 days.
+
+Q: What is net 60?
+A: Net 60 means payment is due in 60 days.
+
+Q: What is accounts payable?
+A: Accounts payable is money owed to suppliers.
+
+Q: What is accounts receivable?
+A: Accounts receivable is money owed by customers.
+
+Q: What is cash flow?
+A: Cash flow is the movement of money in and out.
+
+Q: What is invoice status?
+A: Invoice status shows if it is paid or unpaid.
+
+Q: What is overdue invoice?
+A: An overdue invoice is past its due date.
+
+Q: What is partial payment?
+A: Partial payment is paying part of the invoice.
+
+Q: What is full payment?
+A: Full payment settles the invoice completely.
+
+Q: What is payment method?
+A: Payment method is how the invoice is paid.
+
+Q: What is bank transfer?
+A: Bank transfer is payment sent between bank accounts.
+
+Q: What is direct debit?
+A: Direct debit allows automatic payments.
+
+Q: What is standing order?
+A: Standing order is a scheduled recurring payment.
+
+Q: What is invoice template?
+A: An invoice template is a reusable format.
+
+Q: What is recurring invoice?
+A: A recurring invoice is sent regularly.
+
+Q: What is billing cycle?
+A: Billing cycle is the period between invoices.
+
+Q: What is tax point?
+A: Tax point is when VAT becomes due.
+
+Q: What is VAT registration number?
+A: It is a unique number for VAT-registered businesses.
+
+Q: What is exempt item?
+A: Exempt items do not have VAT applied.
+
+Q: What is zero-rated item?
+A: Zero-rated items have 0% VAT.
+
+Q: What is standard-rated item?
+A: Standard-rated items have 20% VAT.
+
+Q: What is reduced-rated item?
+A: Reduced-rated items have 5% VAT.
+
+Q: What is invoice footer?
+A: Invoice footer contains additional information.
+
+Q: What is invoice header?
+A: Invoice header contains key business details.
+
+Q: What is company name?
+A: Company name identifies the business issuing the invoice.
+
+Q: What is company address?
+A: Company address shows the business location.
+
+Q: What is contact information?
+A: Contact information includes phone and email.
+
+Q: What is invoice currency?
+A: Invoice currency shows the payment currency.
+
+Q: What is exchange rate?
+A: Exchange rate converts between currencies.
+
+Q: What is international invoice?
+A: An invoice for cross-border transactions.
+
+Q: What is electronic invoice?
+A: An electronic invoice is sent digitally.
+
+Q: What is paper invoice?
+A: A paper invoice is printed and mailed.
+
+Q: What is invoice processing?
+A: Invoice processing is handling and approving invoices.
+
+Q: What is invoice approval?
+A: Invoice approval confirms it is valid.
+
+Q: What is invoice reconciliation?
+A: It matches invoices with payments.
+
+Q: What is duplicate invoice?
+A: A duplicate invoice is sent more than once.
+
+Q: What is invoice error?
+A: Invoice error is incorrect information.
+
+Q: What is invoice correction?
+A: Fixing mistakes in an invoice.
+
+Q: What is remittance advice?
+A: Confirmation of payment details.
+
+Q: What is invoice factoring?
+A: Selling invoices for immediate cash.
+
+Q: What is bad debt?
+A: Money that cannot be collected.
+
+Q: What is write-off?
+A: Removing uncollectable invoices.
+
+Q: What is ageing report?
+A: Report showing unpaid invoices by age.
+
+Q: What is invoice tracking?
+A: Monitoring invoice status.
+
+Q: What is billing software?
+A: Software used to create invoices.
+
+Q: What is manual invoicing?
+A: Creating invoices by hand.
+
+Q: What is automated invoicing?
+A: System-generated invoices.
+
+Q: What is invoice integration?
+A: Connecting invoicing with other systems.
+
+Q: What is ERP system?
+A: Software managing business processes.
+
+Q: What is invoice audit?
+A: Reviewing invoices for accuracy.
+
+Q: What is compliance?
+A: Following legal requirements.
+
+Q: What is tax compliance?
+A: Meeting tax regulations.
+
+Q: What is invoice archive?
+A: Storing old invoices.
+
+Q: What is retention period?
+A: Time invoices must be kept.
+
+Q: What is fraud?
+A: Illegal manipulation of invoices.
+
+Q: What is invoice verification?
+A: Checking invoice validity.
+
+Q: What is approval workflow?
+A: Steps to approve invoices.
+
+Q: What is supplier invoice?
+A: Invoice received from supplier.
+
+Q: What is sales invoice?
+A: Invoice sent to customer.
+
+Q: What is internal invoice?
+A: Invoice within an organisation.
+
+Q: What is project invoice?
+A: Invoice linked to a project.
+
+Q: What is hourly invoice?
+A: Invoice based on hours worked.
+
+Q: What is fixed price invoice?
+A: Invoice with set cost.
+
+Q: What is milestone invoice?
+A: Invoice issued at project stages.
+
+Q: What is advance payment?
+A: Payment made before delivery.
+
+Q: What is deposit?
+A: Partial payment upfront.
+
+Q: What is balance due?
+A: Remaining amount to be paid.
+
+Q: What is settlement?
+A: Paying the invoice fully.
+
+Q: What is dispute?
+A: Customer disagreement with invoice.
+
+Q: What is resolution?
+A: Solving invoice issues.
+
+Q: What is credit terms?
+A: Payment conditions agreed.
+
+Q: What is billing agreement?
+A: Contract defining billing rules.
+
+Q: What is service charge?
+A: Additional fee for services.
+
+Q: What is handling fee?
+A: Charge for processing.
+
+Q: What is delivery charge?
+A: Fee for shipping goods.
+
+Q: What is invoice note?
+A: Extra information on invoice.
+
+Q: What is reference number?
+A: Identifier for tracking.
+
+Q: What is tax summary?
+A: Breakdown of taxes applied.
+
+Q: What is invoice breakdown?
+A: Detailed cost explanation.
