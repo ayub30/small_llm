@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import torch
 import torch.nn.functional as F
+import boto3
+import os
 from model import CharModel
 from data import encode, decode
 
@@ -9,6 +11,16 @@ app = FastAPI()
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 block_size = 128
+
+S3_BUCKET = "inv-llm"
+S3_MODEL_KEY = "models/model_latest.pt"
+
+def download_model_from_s3():
+    s3 = boto3.client("s3")
+    s3.download_file(S3_BUCKET, S3_MODEL_KEY, "model.pt")
+    print(f"Model downloaded from s3://{S3_BUCKET}/{S3_MODEL_KEY}")
+
+download_model_from_s3()
 
 model = CharModel()
 model.load_state_dict(torch.load("model.pt", map_location=device))

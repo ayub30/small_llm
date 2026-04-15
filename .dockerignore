@@ -1,0 +1,9 @@
+model.pt
+.ayub/
+__pycache__/
+*.pyc
+mlruns/
+trust-policy.json
+lambda_function.py
+lambda.zip
+s3-notification.json
