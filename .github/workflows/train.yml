@@ -32,24 +32,12 @@ jobs:
       - name: Train model
         run: python3 train.py
 
-      - name: Log in to ECR
-        run: |
-          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 206218410875.dkr.ecr.eu-west-2.amazonaws.com
-
-      - name: Build and push Docker image
-        run: |
-          docker buildx build --platform linux/amd64 -t small-llm .
-          docker tag small-llm:latest 206218410875.dkr.ecr.eu-west-2.amazonaws.com/small-llm:latest
-          docker push 206218410875.dkr.ecr.eu-west-2.amazonaws.com/small-llm:latest
-
-      - name: Deploy to EC2
+      - name: Restart EC2 container
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 206218410875.dkr.ecr.eu-west-2.amazonaws.com
-            docker pull 206218410875.dkr.ecr.eu-west-2.amazonaws.com/small-llm:latest
             docker stop $(docker ps -q) || true
             docker run -d -p 8000:8000 206218410875.dkr.ecr.eu-west-2.amazonaws.com/small-llm:latest
