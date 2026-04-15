@@ -1,12 +1,18 @@
+import mlflow
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import boto3
+import os
 from model import CharModel
-from data import encode, decode, train_data, val_data
+from data import encode, decode, train_data, val_data, vocab_size
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-vocab_size = 58
+S3_BUCKET = "inv-llm"
+S3_MODEL_KEY = "models/model_latest.pt"
+S3_DATA_PREFIX = "data/"
+
 block_size = 128
 n_embd     = 128
 n_head     = 4
@@ -17,6 +23,11 @@ learning_rate = 1e-3
 max_iters = 5000
 eval_interval = 500
 eval_iters = 200
+
+def upload_model_to_s3():
+    s3 = boto3.client("s3")
+    s3.upload_file("model.pt", S3_BUCKET, S3_MODEL_KEY)
+    print(f"Model uploaded to s3://{S3_BUCKET}/{S3_MODEL_KEY}")
 
 model = CharModel().to(device)
 
@@ -47,21 +58,43 @@ def estimate_loss():
 
 optimiser = torch.optim.AdamW(model.parameters(), lr=learning_rate)
 
-for i in range(max_iters):
+mlflow.set_experiment("invoice-llm")
 
-    if i % eval_interval == 0:
-        losses = estimate_loss()
-        print(f"step {i}: train loss {losses['train']:.4f}, val loss {losses['val']:.4f}")
+with mlflow.start_run():
+    mlflow.log_params({
+        "vocab_size": vocab_size,
+        "block_size": block_size,
+        "n_embd": n_embd,
+        "n_head": n_head,
+        "n_layer": n_layer,
+        "dropout": dropout,
+        "learning_rate": learning_rate,
+        "max_iters": max_iters,
+        "batch_size": batch_size
+    })
 
-    x, y = get_batch("train")
-    logits = model(x)
-    batch, seq_len, vocab_size = logits.shape
-    logits = logits.view(batch * seq_len, vocab_size)
-    y = y.view(batch * seq_len)
-    loss = F.cross_entropy(logits, y)
-    optimiser.zero_grad()
-    loss.backward()
-    optimiser.step()
+    for i in range(max_iters):
 
-torch.save(model.state_dict(), "model.pt")
-print("model saved to model.pt")
+        if i % eval_interval == 0:
+            losses = estimate_loss()
+            print(f"step {i}: train loss {losses['train']:.4f}, val loss {losses['val']:.4f}")
+            mlflow.log_metrics({
+                "train_loss": losses["train"].item(),
+                "val_loss": losses["val"].item()
+            }, step=i)
+
+        x, y = get_batch("train")
+        logits = model(x)
+        batch, seq_len, vocab_size = logits.shape
+        logits = logits.view(batch * seq_len, vocab_size)
+        y = y.view(batch * seq_len)
+        loss = F.cross_entropy(logits, y)
+        optimiser.zero_grad()
+        loss.backward()
+        optimiser.step()
+
+    torch.save(model.state_dict(), "model.pt")
+    print("model saved to model.pt")
+    upload_model_to_s3()
+    mlflow.log_artifact("model.pt")
+    mlflow.log_metric("final_val_loss", losses["val"].item())

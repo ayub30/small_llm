@@ -1,0 +1,22 @@
+{
+    "LambdaFunctionConfigurations": [
+      {
+        "LambdaFunctionArn": "arn:aws:lambda:eu-west-2:206218410875:function:trigger-training",
+        "Events": ["s3:ObjectCreated:*"],
+        "Filter": {
+          "Key": {
+            "FilterRules": [
+              {
+                "Name": "prefix",
+                "Value": "data/"
+              },
+              {
+                "Name": "suffix",
+                "Value": ".txt"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }

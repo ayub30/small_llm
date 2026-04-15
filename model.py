@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from data import vocab_size
 
-vocab_size = 58
 block_size = 128
 n_embd     = 128
 n_head     = 4
